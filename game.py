@@ -29,7 +29,7 @@ def start_game(event):
                        "DodgerBlue4", "wheat2", "RosyBrown2", "bisque3", "DarkSeaGreen1"]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
-        paddle = Paddle(canvas, "blue")
+        paddle = Paddle(canvas, "pink")
         bricks = []
         for i in range(0, 5):
             b = []
@@ -77,7 +77,7 @@ def start_game(event):
                         file1 = open("highscore.txt","w")
                         file1.write(str(ball.hit))
                         file1.close()
-                    canvas.create_text(250, 250, text="GAME OVER!!\nYour score was: " + str(ball.hit), fill="red", font="Consolas 24 ")
+                    canvas.create_text(250, 250, text="you lost!!\nYour score was: " + str(ball.hit), fill="red", font="Consolas 24 ")
                     root.update_idletasks()
                     root.update()
                     playing = False
